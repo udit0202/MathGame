@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="studio.idle.mathgame.HighScoreActivity">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Below are your HighScores" />
+
+    <TextView
+        android:id="@+id/easyScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Easy" />
+
+    <TextView
+        android:id="@+id/easyScoreValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/easyScore"
+        android:layout_alignBottom="@+id/easyScore"
+        android:layout_marginLeft="30dp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/mediumScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/easyScore"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Medium" />
+
+    <TextView
+        android:id="@+id/mediumScoreValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/mediumScore"
+        android:layout_alignBottom="@+id/mediumScore"
+        android:layout_marginLeft="30dp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/difficultScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mediumScore"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Hard" />
+
+    <TextView
+        android:id="@+id/difficultScoreValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/difficultScore"
+        android:layout_alignBottom="@+id/difficultScore"
+        android:layout_marginLeft="30dp"
+        android:text="0" />
+</RelativeLayout>

@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="studio.idle.mathgame.GameActivity">
+
+    <TextView
+        android:id="@+id/game_over_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="60dp"
+        android:text="Game Over"
+        android:layout_centerInParent="true"
+        android:alpha="0"/>
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:id="@+id/progress_bar"
+        android:layout_width="200dp"
+        android:layout_height="30dp" />
+    
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBaseline="@id/progress_bar"
+        android:layout_toRightOf="@id/progress_bar"
+        android:layout_marginLeft="50dp"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:background="#ffc5c341"/>
+    <TextView
+        android:id="@+id/temp_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/temp_value_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/temp_text_view"
+        android:textSize="80dp"/>
+
+    <TextView
+        android:id="@+id/temp_value_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/temp_value_1"
+        android:layout_alignBottom="@id/temp_value_1"
+        android:textSize="80dp"/>
+
+    <TextView
+        android:id="@+id/temp_value_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/temp_value_2"
+        android:layout_alignBottom="@id/temp_value_2"
+        android:textSize="80dp"/>
+
+    <TextView
+        android:id="@+id/answerView"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/temp_value_3"
+        android:layout_marginTop="20dp"
+        android:background="#ff47cafd"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+     <Button
+        android:id="@+id/temp_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="submit"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/answerView"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/seven"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="7"
+        android:onClick="sevenKeyPressed"/>
+
+    <Button
+        android:id="@+id/eight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/seven"
+        android:text="8"
+        android:onClick="eightKeyPressed"/>
+
+    <Button
+        android:id="@+id/nine"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/eight"
+        android:text="9"
+        android:onClick="nineKeyPressed"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/nine"
+        android:text="0"
+        android:onClick="zeroKeyPressed"/>
+
+    <Button
+        android:id="@+id/four"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@id/seven"
+        android:text="4"
+        android:onClick="fourKeyPressed"/>
+
+    <Button
+        android:id="@+id/five"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/four"
+        android:layout_alignBottom="@id/four"
+        android:text="5"
+        android:onClick="fiveKeyPressed"/>
+    <Button
+        android:id="@+id/six"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/five"
+        android:layout_alignBottom="@id/five"
+        android:text="6"
+        android:onClick="sixKeyPressed"/>
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/six"
+        android:layout_toRightOf="@id/six"
+        android:text="-"
+        android:onClick="minusKeyPressed"/>
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@id/four"
+        android:text="1"
+        android:onClick="oneKeyPressed"/>
+    <Button
+        android:id="@+id/two"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/one"
+        android:layout_toRightOf="@id/one"
+        android:text="2"
+        android:onClick="twoKeyPressed"/>
+    <Button
+        android:id="@+id/three"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/one"
+        android:layout_toRightOf="@id/two"
+        android:text="3"
+        android:onClick="threeKeyPressed"/>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/three"
+        android:layout_toRightOf="@id/three"
+        android:text="B"
+        android:onClick="backspaceKeyPressed"/>
+
+</RelativeLayout>
